@@ -21,7 +21,7 @@ function tinhTienCap(){
   document.getElementById('txtResult4').innerHTML = 'Mã khách hàng : ' + maKH + '<br>' + 'Tiền Cáp là : $' +  tienCap.toFixed(2);
 }
 
-function tinhPhi(soKenhCC, loaiKhach, soKetNoi, tienKN){
+function tinhPhi(soKenhCC, loaiKhach, soKetNoi){
   
   if(loaiKhach == 'nhaDan'){
     return ND_HOADON + ND_DICHVU_COBAN + (soKenhCC * ND_KENH_CAOCAP);
@@ -35,10 +35,10 @@ function tinhPhi(soKenhCC, loaiKhach, soKetNoi, tienKN){
 }
 
 function disabledInput(){
-  if(document.getElementById('selectloaiKhach').value == 'nhaDan'){
-    document.getElementById('inputsoKN').disabled = true;
-  }else{
+  if(document.getElementById('selectloaiKhach').value == 'doanhNghiep'){
     document.getElementById('inputsoKN').disabled = false;
+  }else{
+    document.getElementById('inputsoKN').disabled = true;
   }
 }
 
